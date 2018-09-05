@@ -1,0 +1,425 @@
+@charset "UTF-8";
+/**
+ * Copyright ©2018 SharedNodes.io. All rights reserved. Code or files can not be copied, modified and/or distributed without the express written permission. Unauthorized copying, modification or use of this file, via any medium is strictly prohibited.
+ *
+ * @version 1.0
+ * @author Saydur Rahman
+ */
+/* Main Navigation */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px 0;
+  background-color: transparent;
+  z-index: 9999;
+  /* sticky is for when the scrolling happens. */
+  /* Hamburger Icon */
+  /* This is the nav container */ }
+  header.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #495057; }
+    header.sticky a.logo {
+      padding-top: 0;
+      padding-bottom: 0; }
+    header.sticky nav ul li a {
+      font-size: 75%; }
+  header > .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+  header a.logo {
+    text-decoration: none;
+    color: #FFFFFF;
+    display: inline-block;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    line-height: inherit;
+    white-space: nowrap;
+    width: 180px; }
+  header .hamBurgerWrap {
+    width: 74px;
+    font-size: 12px;
+    padding: 10px 10px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    border: 0;
+    background-color: #373737;
+    border-radius: 6px;
+    cursor: pointer;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: none; }
+    @media only screen and (max-width: 992px) {
+      header .hamBurgerWrap {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; } }
+  header #nav-icon {
+    width: 14px;
+    height: 13px;
+    position: relative;
+    float: right;
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out; }
+    header #nav-icon span {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 100%;
+      background-color: #FFFFFF;
+      border: none;
+      opacity: 1;
+      left: 0;
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
+      header #nav-icon span:nth-child(1) {
+        top: 0px; }
+      header #nav-icon span:nth-child(2), header #nav-icon span:nth-child(3) {
+        top: 5px; }
+      header #nav-icon span:nth-child(4) {
+        top: 10px; }
+    header #nav-icon.open span:nth-child(1) {
+      top: 5px;
+      width: 0%;
+      left: 50%; }
+    header #nav-icon.open span:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      transform: rotate(45deg); }
+    header #nav-icon.open span:nth-child(3) {
+      -webkit-transform: rotate(-45deg);
+      transform: rotate(-45deg); }
+    header #nav-icon.open span:nth-child(4) {
+      top: 5px;
+      width: 0%;
+      left: 50%; }
+  header nav ul {
+    margin: 0;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    list-style: none;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    header nav ul li {
+      list-style: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+      header nav ul li a {
+        text-decoration: none;
+        font-size: 1em;
+        font-weight: 600;
+        padding: 0.75em 0;
+        padding: 1.1em 0;
+        margin: 0 0.8em;
+        color: #FFFFFF;
+        position: relative; }
+        header nav ul li a.last {
+          margin-right: 0; }
+        header nav ul li a.active, header nav ul li a:hover {
+          color: #28E7A8; }
+          header nav ul li a.active:before, header nav ul li a.active:after, header nav ul li a:hover:before, header nav ul li a:hover:after {
+            opacity: 1; }
+          header nav ul li a.active:after, header nav ul li a:hover:after {
+            width: 100%; }
+  @media only screen and (max-width: 992px) {
+    header nav {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      -webkit-transform-origin: top;
+      transform-origin: top;
+      -webkit-transform: scale(1, 0);
+      transform: scale(1, 0);
+      -webkit-transition: -webkit-transform 400ms ease-in-out;
+      transition: -webkit-transform 400ms ease-in-out;
+      transition: transform 400ms ease-in-out;
+      transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out;
+      background-color: #373737; }
+      header nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        width: 100%; }
+        header nav ul li {
+          background-color: #373737; }
+          header nav ul li a {
+            display: block;
+            padding: 15px;
+            border-bottom: 0.5px solid #495057;
+            width: 100%;
+            opacity: 0;
+            -webkit-transition: opacity 150ms ease-in-out;
+            transition: opacity 150ms ease-in-out; }
+            header nav ul li a.active:before, header nav ul li a.active:after, header nav ul li a:hover:before, header nav ul li a:hover:after {
+              opacity: 0; } }
+  header .navToggle {
+    display: none; }
+  header .navToggle:checked ~ nav {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); }
+    header .navToggle:checked ~ nav a {
+      opacity: 1;
+      -webkit-transition: opacity 250ms ease-in-out 250ms;
+      transition: opacity 250ms ease-in-out 250ms; }
+
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  color: #FFFFFF;
+  background-image: url(../img/heroBG.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center; }
+  .hero .overlay {
+    background-color: rgba(0, 0, 0, 0); }
+  .hero > .container {
+    position: relative;
+    background-image: url(../img/heroTxtImg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right 65px;
+    height: 80vh; }
+    @media only screen and (max-width: 1182px) {
+      .hero > .container {
+        background-size: 70%;
+        background-position: right bottom; } }
+    @media only screen and (max-width: 500px) {
+      .hero > .container {
+        height: 100vh;
+        background-size: contain;
+        background-position: center bottom; } }
+    .hero > .container .heroContent {
+      position: absolute;
+      width: 600px;
+      top: 50%;
+      -webkit-transform: translate(0, -50%);
+      transform: translate(0, -50%); }
+      @media only screen and (max-width: 500px) {
+        .hero > .container .heroContent {
+          top: 20%;
+          -webkit-transform: translate(0, -20%);
+          transform: translate(0, -20%); } }
+      .hero > .container .heroContent h1 {
+        color: #FFFFFF; }
+      .hero > .container .heroContent p {
+        margin: 3em 0;
+        color: #FFFFFF;
+        width: 320px; }
+        @media only screen and (max-width: 320px) {
+          .hero > .container .heroContent p {
+            width: 100%; } }
+    .hero > .container .downloadLinks a {
+      display: inline-block;
+      width: 30%; }
+
+@media only screen and (max-width: 600px) {
+  .hero > .container .heroContent {
+    width: 100%;
+    left: 0;
+    padding: 0 20px;
+    margin-top: 25px; }
+    .hero > .container .heroContent h1 {
+      font-size: 2em; }
+    .hero > .container .heroContent .subscription input {
+      width: 63%; }
+    .hero > .container .heroContent .subscription .btn {
+      margin: 0;
+      padding: 0.8em; } }
+
+/* =================================== 
+START OF HOW IT WORKS SECTION.
+=================================== */
+/* Creating centerd header with row and fullwidth col as container */
+.centerHeading.row .col-12 .col.text {
+  float: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 308px;
+  margin-bottom: 3em;
+  /* small after normally act as a dot. its hidden for center headings */ }
+  @media only screen and (max-width: 370px) {
+    .centerHeading.row .col-12 .col.text {
+      /* changing col to fullwidth for mobile compatabiliti */
+      width: 100%;
+      padding: 0 1em; } }
+  .centerHeading.row .col-12 .col.text small:after {
+    display: none; }
+
+/* .howItWorks is a section that wraps everything in How it works section */
+.howItWorks {
+  /* 
+    Start of three steps image with arrow.
+    using 1 row and 5 column grid.
+    */ }
+  @media only screen and (max-width: 730px) {
+    .howItWorks {
+      /* Adding empty space to make it look more apealing on responsive */ }
+      .howItWorks .centerHeading.row .col-12 .col.text {
+        margin: 0 0 2em 2em; } }
+  .howItWorks .row.steps {
+    /*  .col-2.arrowImgWrap .col.img contains images with right arrow */ }
+    .howItWorks .row.steps .col-2.imgWrap {
+      width: 22.22222%;
+      text-align: center;
+      /* .col is child of */ }
+      .howItWorks .row.steps .col-2.imgWrap .col.img span {
+        padding: 1em;
+        display: inline-block; }
+    .howItWorks .row.steps .col-2.arrowImgWrap .col.img img {
+      margin-top: 50%; }
+    @media only screen and (max-width: 730px) {
+      .howItWorks .row.steps {
+        /* This is brake point for the grid. */
+        /* Arrow images are re positioned and rotated down wards */ }
+        .howItWorks .row.steps .col-2.imgWrap {
+          width: 100%; }
+          .howItWorks .row.steps .col-2.imgWrap .col.img {
+            /* images are resized at this breakpoint to make it more comfortable for smaller screen */
+            /* Span contains the text that are positioned to the right of the image icons */ }
+            .howItWorks .row.steps .col-2.imgWrap .col.img img {
+              width: 30%; }
+            .howItWorks .row.steps .col-2.imgWrap .col.img span {
+              padding: 1em;
+              width: 50%;
+              display: inline-block;
+              float: right;
+              margin-top: 10%;
+              text-align: left; }
+        .howItWorks .row.steps .col-2.arrowImgWrap .col.img img {
+          margin-top: 0;
+          margin-left: 100%;
+          -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+          height: 1em; } }
+    @media only screen and (max-width: 500px) {
+      .howItWorks .row.steps {
+        /* Text being re-positioned for better apperance */ }
+        .howItWorks .row.steps .col-2.imgWrap .col.img span {
+          margin-top: 10%; } }
+    @media only screen and (max-width: 488px) {
+      .howItWorks .row.steps {
+        /* Text being re-positioned for better apperance */ }
+        .howItWorks .row.steps .col-2.imgWrap .col.img span {
+          margin-top: 4%; } }
+    @media only screen and (max-width: 388px) {
+      .howItWorks .row.steps {
+        /* Arrow image being re-positioned and re-sized slitely */ }
+        .howItWorks .row.steps .col-2.imgWrap .col.img {
+          /* image size being changed */
+          /* Text being re-positioned for better apperance */ }
+          .howItWorks .row.steps .col-2.imgWrap .col.img img {
+            width: 30%; }
+          .howItWorks .row.steps .col-2.imgWrap .col.img span {
+            width: 70%;
+            margin-top: 5%;
+            padding: 0 1em; }
+        .howItWorks .row.steps .col-2.arrowImgWrap .col.img img {
+          height: 2em;
+          margin-left: 40%; } }
+
+/* ============================= 
+    START OF FOOTER
+==============================*/
+.footer {
+  background-image: url(../img/hero.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding: 6em 0; }
+  .footer .overlay {
+    background-color: rgba(0, 0, 0, 0.4); }
+  .footer footer .row {
+    color: #FFFFFF; }
+    .footer footer .row p {
+      color: #FFFFFF; }
+    .footer footer .row .col-3 > .col {
+      padding: 1em; }
+    .footer footer .row .logoCol {
+      width: 16.66666%; }
+    .footer footer .row .formCol {
+      width: 50%; }
+      .footer footer .row .formCol > .col {
+        padding: 1em 4em; }
+      .footer footer .row .formCol form .col-6 .col:first-of-type {
+        padding-right: 0.5em; }
+    .footer footer .row .linksCol {
+      width: 16.66666%; }
+      .footer footer .row .linksCol ul li {
+        list-style: none; }
+        .footer footer .row .linksCol ul li a {
+          color: #FFFFFF;
+          text-transform: uppercase; }
+          .footer footer .row .linksCol ul li a:hover {
+            color: #28E7A8; }
+      .footer footer .row .linksCol:nth-child(4) ul {
+        float: right; }
+    @media only screen and (max-width: 895px) {
+      .footer footer .row .logoCol {
+        width: 30%; }
+      .footer footer .row .formCol {
+        width: 70%; }
+      .footer footer .row .linksCol {
+        width: 50%;
+        margin-top: 1em; } }
+    @media only screen and (max-width: 730px) {
+      .footer footer .row .formCol > .col {
+        padding: 1em; }
+        .footer footer .row .formCol > .col .row .col-6 {
+          width: 100%; } }
+    @media only screen and (max-width: 500px) {
+      .footer footer .row .logoCol, .footer footer .row .formCol {
+        width: 100%; } }

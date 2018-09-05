@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+  <title>Coffee Drop</title>
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/grid.css">
+  <link rel="stylesheet" href="css/app.css">
+
+  <!-- Custom JavaScript -->
+  <script src="js/utilities.js"></script>
+  <script src="js/script.js"></script>
+</head>
+
+<body id="pageTop">
+
+  <header class="headNav">
+    <div class="container">
+
+      <a href="#pageTop" class="logo" onclick="javascript: Coffee.navClose()">
+        <img src="img/logo.svg" alt="Site Logo on Nav">
+      </a>
+      <input type="checkbox" id="navToggle" class="navToggle">
+
+      <label for="navToggle" class="hamBurgerWrap" onclick="javascript: Coffee.navOpen(this)">
+        <span class="hamBurgerTxt">Menu</span>
+        <span id="nav-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </span>
+      </label>
+
+      <nav>
+        <ul>
+          <li>
+            <a class="navLink" href="#Login" onclick="javascript: Coffee.navClose()">Login</a>
+          </li>
+          <li>
+            <a class="navLink" href="#howItWorks" onclick="javascript: Coffee.navClose()">Download IOS App</a>
+          </li>
+          <li class="last">
+            <a class="navLink last" href="#price" onclick="javascript: Coffee.navClose()">  Download Android App</a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- Start of Hero image and text -->
+  <div id="hero" class="hero">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="heroContent">
+        <h2>
+          Recycle your Nespresso
+        </h2>
+        <p>
+          We can recycle your coffee pods for cashback or free coffee!
+        </p>
+
+        <div class="downloadLinks clearFix">
+          <a href="#"><img src="img/appStore.png" alt="Download From App Store"></a>
+          <a href="#"><img src="img/playStore.png" alt="Download From Play Store"></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <section class="howItWorks" id="howItWorks">
+
+      <div class="row sectionHeadings centerHeading">
+          <div class="col-12">
+              <div class="col text">
+                  <h2>
+                      <span>How It Works?</span>
+                  </h2>
+              </div>
+          </div>
+      </div>
+
+      <div class="container">
+          <div class="row steps">
+              <div class="col-2 imgWrap">
+                  <div class="col img">
+                      <img src="img/howItWorks1.svg" alt="">
+                      <span>You can now save the planet in style, thanks to cashback for your nespresso pods at any of our sixteen locations nationwide.</span>
+                  </div>
+              </div>
+              <div class="col-2 arrowImgWrap">
+                  <div class="col img">
+                      <img src="img/howItWorksArrow.svg" alt="">
+                  </div>
+              </div>
+              <div class="col-2 imgWrap">
+                  <div class="col img">
+                      <img src="img/howItWorks2.svg" alt="">
+                      <span>Simply bring in your used pods, place them in an approved CoffeeDrop bag and bring them into store. </span>
+                  </div>
+              </div>
+              <div class="col-2 arrowImgWrap">
+                  <div class="col img">
+                      <img src="img/howItWorksArrow.svg" alt="">
+                  </div>
+              </div>
+              <div class="col-2 imgWrap">
+                  <div class="col img">
+                      <img src="img/howItWorks3.svg" alt="">
+                      <span>Our trained staff will quickly calculate your cashback - or better still, you can do it yourself on our handy App available on iOS or Android</span>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </section>
+
+
+</body>
+
+</html>

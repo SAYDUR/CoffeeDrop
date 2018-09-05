@@ -1,0 +1,123 @@
+/* =================================== 
+START OF HOW IT WORKS SECTION.
+=================================== */
+
+/* Creating centerd header with row and fullwidth col as container */
+.centerHeading.row .col-12 .col.text {
+    float: none;
+    margin: 0 auto;
+    padding: 0;
+    width: 308px;
+    margin-bottom: 3em;
+
+    @media only screen and (max-width: 370px) {
+        /* changing col to fullwidth for mobile compatabiliti */
+        width: 100%;
+        padding: 0 1em;
+    }
+
+    /* small after normally act as a dot. its hidden for center headings */
+    small:after {
+        display: none;
+    }
+}
+
+/* .howItWorks is a section that wraps everything in How it works section */
+.howItWorks {
+    @media only screen and (max-width: 730px) {
+        /* Adding empty space to make it look more apealing on responsive */
+        .centerHeading.row .col-12 .col.text {
+            margin: 0 0 2em 2em;
+        }
+    }
+
+    /* 
+    Start of three steps image with arrow.
+    using 1 row and 5 column grid.
+    */
+    .row.steps {
+        .col-2.imgWrap {
+            width: 22.22222%;
+            text-align: center;
+
+            /* .col is child of */
+            .col.img span {
+                padding: 1em;
+                display: inline-block;
+            }
+        }
+
+        /*  .col-2.arrowImgWrap .col.img contains images with right arrow */
+        .col-2.arrowImgWrap .col.img img {
+            margin-top: 50%;
+        }
+
+        @media only screen and (max-width: 730px) {
+            /* This is brake point for the grid. */
+            .col-2.imgWrap {
+                width: 100%;
+
+                .col.img {
+                    /* images are resized at this breakpoint to make it more comfortable for smaller screen */
+                    img {
+                        width: 30%;
+                    }
+
+                    /* Span contains the text that are positioned to the right of the image icons */
+                    span {
+                        padding: 1em;
+                        width: 50%;
+                        display: inline-block;
+                        float: right;
+                        margin-top: 10%;
+                        text-align: left;
+                    }
+                }
+            }
+
+            /* Arrow images are re positioned and rotated down wards */
+            .col-2.arrowImgWrap .col.img img {
+                margin-top: 0;
+                margin-left: 100%;
+                transform: rotate(90deg);
+                height: 1em;
+            }
+        }
+
+        @media only screen and (max-width: 500px) {
+            /* Text being re-positioned for better apperance */
+            .col-2.imgWrap .col.img span {
+                margin-top: 10%;
+            }
+        }
+
+        @media only screen and (max-width: 488px) {
+            /* Text being re-positioned for better apperance */
+            .col-2.imgWrap .col.img span {
+                margin-top: 4%;
+            }
+        }
+
+        @media only screen and (max-width: 388px) {
+            .col-2.imgWrap .col.img {
+                /* image size being changed */
+                img {
+                    width: 30%;
+                }
+
+                /* Text being re-positioned for better apperance */
+                span {
+                    width: 70%;
+                    margin-top: 5%;
+                    padding: 0 1em;
+                }
+            }
+
+            /* Arrow image being re-positioned and re-sized slitely */
+            .col-2.arrowImgWrap .col.img img {
+                height: 2em;
+                margin-left: 40%;
+            }
+        }
+    }
+}

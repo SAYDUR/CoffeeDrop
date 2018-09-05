@@ -1,0 +1,94 @@
+.hero {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    color: $light;
+    background-image: url(../img/heroBG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    .overlay {
+        background-color: rgba($dark, 0);
+    }
+
+    > .container {
+        position: relative;
+        background-image: url(../img/heroTxtImg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: right 65px;
+        height: 80vh;
+        @media only screen and (max-width: 1182px) {
+            // height: 100vh;
+            background-size: 70%;
+            background-position: right bottom;
+        }
+        @media only screen and (max-width: 500px) {
+            height: 100vh;
+            background-size: contain;
+            background-position: center bottom;
+        }
+
+        .heroContent {
+            position: absolute;
+            width: 600px;
+            top: 50%;
+            transform: translate(0, -50%);
+            @media only screen and (max-width: 500px) {
+                top: 20%;
+                transform: translate(0, -20%);
+            }
+
+            h1 {
+                color: $light;
+            }
+
+            p {
+                margin: 3em 0;
+                color: $light;
+                width: 320px;
+                @media only screen and (max-width: 320px) {
+                    width: 100%;
+                }
+            }
+        }
+
+        .downloadLinks{
+            a{
+                display: inline-block;
+                width: 30%;
+            }
+        }
+    }
+}
+
+// Media Query
+
+@media #{$phone} {
+    .hero > .container {
+        // height: 70vh;
+
+        .heroContent {
+            width: 100%;
+            left: 0;
+            padding: 0 20px;
+            margin-top: 25px;
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .subscription {
+                input {
+                    width: 63%;
+                }
+
+                .btn {
+                    margin: 0;
+                    padding: 0.8em;
+                }
+            }
+        }
+    }
+}
