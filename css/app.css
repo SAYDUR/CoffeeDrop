@@ -415,56 +415,11 @@ START OF HOW IT WORKS SECTION.
   .map .overlay {
     background: rgba(151, 151, 151, 0.41); }
 
-/* ============================= 
-    START OF FOOTER
-==============================*/
-.footer {
-  background-image: url(../img/hero.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  padding: 6em 0; }
-  .footer .overlay {
-    background-color: rgba(0, 0, 0, 0.4); }
-  .footer footer .row {
+footer {
+  padding: 2em;
+  background-color: #373737;
+  text-align: center; }
+  footer p {
     color: #FFFFFF; }
-    .footer footer .row p {
-      color: #FFFFFF; }
-    .footer footer .row .col-3 > .col {
-      padding: 1em; }
-    .footer footer .row .logoCol {
-      width: 16.66666%; }
-    .footer footer .row .formCol {
-      width: 50%; }
-      .footer footer .row .formCol > .col {
-        padding: 1em 4em; }
-      .footer footer .row .formCol form .col-6 .col:first-of-type {
-        padding-right: 0.5em; }
-    .footer footer .row .linksCol {
-      width: 16.66666%; }
-      .footer footer .row .linksCol ul li {
-        list-style: none; }
-        .footer footer .row .linksCol ul li a {
-          color: #FFFFFF;
-          text-transform: uppercase; }
-          .footer footer .row .linksCol ul li a:hover {
-            color: #28E7A8; }
-      .footer footer .row .linksCol:nth-child(4) ul {
-        float: right; }
-    @media only screen and (max-width: 895px) {
-      .footer footer .row .logoCol {
-        width: 30%; }
-      .footer footer .row .formCol {
-        width: 70%; }
-      .footer footer .row .linksCol {
-        width: 50%;
-        margin-top: 1em; } }
-    @media only screen and (max-width: 730px) {
-      .footer footer .row .formCol > .col {
-        padding: 1em; }
-        .footer footer .row .formCol > .col .row .col-6 {
-          width: 100%; } }
-    @media only screen and (max-width: 500px) {
-      .footer footer .row .logoCol, .footer footer .row .formCol {
-        width: 100%; } }
+  footer a img {
+    width: 200px; }

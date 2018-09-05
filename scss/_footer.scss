@@ -1,101 +1,13 @@
-/* ============================= 
-    START OF FOOTER
-==============================*/ 
-.footer {
-    background-image: url(../img/hero.png);
-    background-position: center center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: relative;
-    padding: 6em 0;
+footer{
+    padding: 2em;
+    background-color: $secondary;
+    text-align: center;
 
-    .overlay {
-        background-color: rgba(0, 0, 0, 0.4);
+    p{
+        color: $light;
     }
 
-    footer {
-        .row {
-            color: $light;
-
-            p {
-                color: $light;
-            }
-
-            .col-3 > .col {
-                padding: 1em;
-            }
-
-            .logoCol {
-                width: 16.66666%;
-            }
-
-            .formCol {
-                width: 50%;
-
-                & > .col {
-                    padding: 1em 4em;
-                }
-
-                form .col-6 .col:first-of-type {
-                    padding-right: 0.5em;
-                }
-            }
-
-            .linksCol {
-                width: 16.66666%;
-
-                ul {
-                    li {
-                        list-style: none;
-
-                        a {
-                            color: $light;
-                            text-transform: uppercase;
-
-                            &:hover {
-                                color: $primary;
-                            }
-                        }
-                    }
-                }
-
-                &:nth-child(4) ul {
-                    float: right;
-                }
-            }
-
-            @media only screen and (max-width: 895px) {
-                .logoCol {
-                    width: 30%;
-                }
-
-                .formCol {
-                    width: 70%;
-                }
-
-                .linksCol {
-                    width: 50%;
-                    margin-top: 1em;
-                }
-            }
-
-            @media only screen and (max-width: 730px) {
-                .formCol {
-                    > .col {
-                        padding: 1em;
-
-                        .row .col-6 {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-
-            @media only screen and (max-width: 500px) {
-                .logoCol, .formCol {
-                    width: 100%;
-                }
-            }
-        }
+    a img{
+        width: 200px;
     }
 }
