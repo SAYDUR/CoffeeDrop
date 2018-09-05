@@ -365,6 +365,56 @@ START OF HOW IT WORKS SECTION.
         .howItWorks .row.steps .col-2.arrowImgWrap .col.img img {
           display: none; } }
 
+.price {
+  background-color: #373737; }
+  .price h2 {
+    text-align: center;
+    color: #FFFFFF; }
+  .price .table .col {
+    padding: 1em;
+    margin: 2em 1em; }
+    @media only screen and (max-width: 700px) {
+      .price .table .col {
+        margin: 2em 0; } }
+    .price .table .col .priceTitle {
+      color: #28E7A8;
+      text-align: center; }
+    .price .table .col table {
+      width: 100%;
+      background-color: #4F4F4F;
+      color: #FFFFFF;
+      border-radius: 5px;
+      position: relative; }
+      .price .table .col table:after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        width: 25px;
+        height: 25px;
+        margin-top: -10px;
+        background-color: transparent;
+        background-image: url(../img/coffeeBeans.svg);
+        background-size: contain; }
+      .price .table .col table td, .price .table .col table th {
+        text-align: left;
+        padding: 1em; }
+      .price .table .col table tr:nth-child(even) {
+        background-color: #979797; }
+  @media only screen and (max-width: 600px) {
+    .price .table {
+      width: 100%; }
+      .price .table .col {
+        padding: 0; } }
+
+.map {
+  position: relative;
+  padding: 19em 0;
+  background-image: url(../img/map.svg);
+  background-repeat: no-repeat;
+  background-size: 2000px; }
+  .map .overlay {
+    background: rgba(151, 151, 151, 0.41); }
+
 /* ============================= 
     START OF FOOTER
 ==============================*/

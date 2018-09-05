@@ -1,0 +1,11 @@
+.map{
+    position: relative;
+    padding: 19em 0;
+    background-image: url(../img/map.svg);
+    background-repeat: no-repeat;
+    background-size: 2000px;
+
+    .overlay{
+        background: rgba(151, 151, 151, 0.41);
+    }
+}
