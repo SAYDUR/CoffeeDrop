@@ -287,16 +287,13 @@ START OF HOW IT WORKS SECTION.
   float: none;
   margin: 0 auto;
   padding: 0;
-  width: 308px;
-  margin-bottom: 3em;
-  /* small after normally act as a dot. its hidden for center headings */ }
+  width: 370px;
+  margin-bottom: 3em; }
   @media only screen and (max-width: 370px) {
     .centerHeading.row .col-12 .col.text {
       /* changing col to fullwidth for mobile compatabiliti */
       width: 100%;
       padding: 0 1em; } }
-  .centerHeading.row .col-12 .col.text small:after {
-    display: none; }
 
 /* .howItWorks is a section that wraps everything in How it works section */
 .howItWorks {
@@ -304,6 +301,10 @@ START OF HOW IT WORKS SECTION.
     Start of three steps image with arrow.
     using 1 row and 5 column grid.
     */ }
+  .howItWorks .imgWrap img {
+    width: 200px; }
+  .howItWorks .arrowImgWrap img {
+    width: 100px; }
   @media only screen and (max-width: 730px) {
     .howItWorks {
       /* Adding empty space to make it look more apealing on responsive */ }
@@ -319,7 +320,8 @@ START OF HOW IT WORKS SECTION.
         padding: 1em;
         display: inline-block; }
     .howItWorks .row.steps .col-2.arrowImgWrap .col.img img {
-      margin-top: 50%; }
+      margin-top: 30%;
+      margin-left: 30%; }
     @media only screen and (max-width: 730px) {
       .howItWorks .row.steps {
         /* This is brake point for the grid. */
@@ -336,7 +338,7 @@ START OF HOW IT WORKS SECTION.
               width: 50%;
               display: inline-block;
               float: right;
-              margin-top: 10%;
+              margin-top: 6%;
               text-align: left; }
         .howItWorks .row.steps .col-2.arrowImgWrap .col.img img {
           margin-top: 0;
@@ -344,31 +346,24 @@ START OF HOW IT WORKS SECTION.
           -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
           height: 1em; } }
-    @media only screen and (max-width: 500px) {
+    @media only screen and (max-width: 576px) {
       .howItWorks .row.steps {
         /* Text being re-positioned for better apperance */ }
         .howItWorks .row.steps .col-2.imgWrap .col.img span {
-          margin-top: 10%; } }
-    @media only screen and (max-width: 488px) {
+          margin-top: 2%; } }
+    @media only screen and (max-width: 520px) {
       .howItWorks .row.steps {
         /* Text being re-positioned for better apperance */ }
         .howItWorks .row.steps .col-2.imgWrap .col.img span {
-          margin-top: 4%; } }
-    @media only screen and (max-width: 388px) {
-      .howItWorks .row.steps {
-        /* Arrow image being re-positioned and re-sized slitely */ }
-        .howItWorks .row.steps .col-2.imgWrap .col.img {
-          /* image size being changed */
-          /* Text being re-positioned for better apperance */ }
-          .howItWorks .row.steps .col-2.imgWrap .col.img img {
-            width: 30%; }
-          .howItWorks .row.steps .col-2.imgWrap .col.img span {
-            width: 70%;
-            margin-top: 5%;
-            padding: 0 1em; }
+          margin-top: 0;
+          width: 70%; }
         .howItWorks .row.steps .col-2.arrowImgWrap .col.img img {
-          height: 2em;
-          margin-left: 40%; } }
+          margin-left: 30%; } }
+    @media only screen and (max-width: 400px) {
+      .howItWorks .row.steps {
+        /* Arrow image being removed */ }
+        .howItWorks .row.steps .col-2.arrowImgWrap .col.img img {
+          display: none; } }
 
 /* ============================= 
     START OF FOOTER

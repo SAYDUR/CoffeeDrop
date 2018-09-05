@@ -7,7 +7,7 @@ START OF HOW IT WORKS SECTION.
     float: none;
     margin: 0 auto;
     padding: 0;
-    width: 308px;
+    width: 370px;
     margin-bottom: 3em;
 
     @media only screen and (max-width: 370px) {
@@ -15,15 +15,16 @@ START OF HOW IT WORKS SECTION.
         width: 100%;
         padding: 0 1em;
     }
-
-    /* small after normally act as a dot. its hidden for center headings */
-    small:after {
-        display: none;
-    }
 }
 
 /* .howItWorks is a section that wraps everything in How it works section */
 .howItWorks {
+    .imgWrap img{
+        width: 200px;;
+    }
+    .arrowImgWrap img{
+        width: 100px;;
+    }
     @media only screen and (max-width: 730px) {
         /* Adding empty space to make it look more apealing on responsive */
         .centerHeading.row .col-12 .col.text {
@@ -49,7 +50,8 @@ START OF HOW IT WORKS SECTION.
 
         /*  .col-2.arrowImgWrap .col.img contains images with right arrow */
         .col-2.arrowImgWrap .col.img img {
-            margin-top: 50%;
+            margin-top: 30%;
+            margin-left: 30%;
         }
 
         @media only screen and (max-width: 730px) {
@@ -69,7 +71,7 @@ START OF HOW IT WORKS SECTION.
                         width: 50%;
                         display: inline-block;
                         float: right;
-                        margin-top: 10%;
+                        margin-top: 6%;
                         text-align: left;
                     }
                 }
@@ -84,39 +86,30 @@ START OF HOW IT WORKS SECTION.
             }
         }
 
-        @media only screen and (max-width: 500px) {
+        @media only screen and (max-width: 576px) {
             /* Text being re-positioned for better apperance */
             .col-2.imgWrap .col.img span {
-                margin-top: 10%;
+                margin-top: 2%;
             }
         }
 
-        @media only screen and (max-width: 488px) {
+        @media only screen and (max-width: 520px) {
             /* Text being re-positioned for better apperance */
             .col-2.imgWrap .col.img span {
-                margin-top: 4%;
-            }
-        }
-
-        @media only screen and (max-width: 388px) {
-            .col-2.imgWrap .col.img {
-                /* image size being changed */
-                img {
-                    width: 30%;
-                }
-
-                /* Text being re-positioned for better apperance */
-                span {
-                    width: 70%;
-                    margin-top: 5%;
-                    padding: 0 1em;
-                }
+                margin-top: 0;
+                width: 70%;
             }
 
-            /* Arrow image being re-positioned and re-sized slitely */
             .col-2.arrowImgWrap .col.img img {
-                height: 2em;
-                margin-left: 40%;
+                margin-left: 30%;
+            }
+        }
+
+        @media only screen and (max-width: 400px) {
+
+            /* Arrow image being removed */
+            .col-2.arrowImgWrap .col.img img {
+                display: none;
             }
         }
     }
